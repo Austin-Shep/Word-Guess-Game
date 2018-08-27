@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <p>rules: the computer will generate a string of letters to for a word. it will apear as a row of blank underscores to the user. the user must then guess what the word is by inputing his guesses on his keyboard. when a correct letter is guessed it will be revieled on the respective line. otherwise the guess will be displayed in a box labled [previous guesses]. the user will be allowed a total of six(6) wrong guesses. after that a game over will display.</p>
+
+    <p>Will begin on a start menu. 1 option: Begin Game, if clicked game will load.
+        once game loads, a word will be generated, at random, from a list of predetermined words.
+        user will be prompted to guess. key events will listen for the guess; {if the the guess is correct{display the correct guess on the line} else {display the incorrect letter in the approriate box and subtract 1 from the total guesses remaining}</p> 
+        <p>repeat until game over or game win. if game win{add to total number of wins, generate aproriate audio queue and generate a new Word} else {display game over, generate appropriate audio queue, and prompt player to try again.}
+    </p>
+    <ol><h1>Order of Operation</h1>
+        <li>Write html document(preferably mainly in bootstrap, get used to it) </li>
+        <li>assign id's to all of the appropriate elements in the html document</li>
+            <li>write corosponding var</li>
+        <li>make score card (should be as simple as asigning variables to .textcontents)</li>
+        <li>figure out how events work</li>
+        <li>create a list of words that will be used for the game, all words will be same length for simplicity( long array)</li>
+        <li>write start game in javascript(press any key to start)</li>
+        <li>figure out how to make a re-useable function to assign random word from array to the game (math) </li>
+        <li>figure out a function that will work to detrmine if a keystroke is correct or not and then properly apply it to the correct space. will probably involve indexing and returns.(hard loop assigment 20) </li>
+        <li>lots o' if/else statements</li>
+                <li>if -keystroke- == index[1-6] then keystroke.textcontents(index[1-6])? </li>
+        <li>program your win and loss conditions (could be two seperate points but we shall see)</li>
+                <li>if index[1-6] all equal keystroke then play tune and display new word from [array]  </li>
+        <li>program game reset(play again? screen. might just make it happen automaticly but i like a challenge)</li>
+        <li>do css</li>
+        <li>polish</li>
+    </ol>
+    
+</body>
+</html>
