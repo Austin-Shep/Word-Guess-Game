@@ -13,7 +13,7 @@ var guessesLeft = 0;
 //global functions===================
 generateWord = () =>{
     randWord = wordBank[Math.floor(Math.random() * wordBank.length)]; 
-    underScores = [];
+    underScores = [];   
 }
 
 //generate underscores based on value of randWord
@@ -28,17 +28,30 @@ writeUnderScores = () => {
 };
 
 
-//start game -- log word and reset tries
+//start game -- generate new word, log word, and reset tries/wrongs, writes underscores,
 $('#startButton').on('click', function(){
+    console.log(randWord);
     generateWord();
     generateUnderScores();
     writeUnderScores();
-    console.log(randWord);
+    $('#wrongLetter').html(' ');
     guessesLeft = 9;
     $('#guessesLeft').text(guessesLeft);
 });
 
 
+scoreBoard = () => {
+    if((underScores.join('')) == randWord){
+        alert('you win!');
+        wins ++;
+        $('#wins').html(wins);
+    }else if(guessesLeft == 0){
+        alert('game over');
+        loss++;
+        $('#loss').html(loss);
+
+    }
+};
 
 document.addEventListener("keyup", (event) => {
     var keyword = String.fromCharCode(event.keyCode).toLowerCase();
@@ -46,31 +59,22 @@ document.addEventListener("keyup", (event) => {
 
     if(randWord.indexOf(keyword) > -1) {
         //if the keystroke is correct..
-        console.log('yes')
+        // console.log('yes')
         userGuesses.push(keyword);
         //..replace the underscore with keystroke
         underScores[randWord.indexOf(keyword)] = keyword;
         underScores[randWord.lastIndexOf(keyword)] = keyword;
         writeUnderScores();
     }else if(randWord.indexOf(keyword) <= -1){
-        $('#wrongletter').append(keyword);
-        console.log('no')
+        //incorrect guess.
+        $('#wrongLetter').append(keyword);
+        // console.log('no')
         if(guessesLeft > 0){
             guessesLeft--;
         };
     };
+        scoreBoard();
         $('#guessesLeft').html(guessesLeft);
-        
-        if((underScores.join('')) == randWord){
-            alert('you win!');
-            wins ++;
-            $('#wins').html(wins);
-        }else if(guessesLeft == 0){
-            alert('game over');
-            loss++;
-            $('#loss').html(loss);
-
-        }
-});
-        
+    });
+    
         

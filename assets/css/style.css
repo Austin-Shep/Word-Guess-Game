@@ -19,6 +19,7 @@ h3{
     line-height: 5%;
 }
 
-.underscores{
-    font-size: 2rem;
+#underScores{
+    font-size: 2rem!important;
+    padding: 15%;
 }
