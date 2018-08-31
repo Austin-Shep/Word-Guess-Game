@@ -14,18 +14,19 @@
  <div class="container-fluid">
     <div class="row">
         <div class="col" id="title">
-            <h1>ASOIAF Hangman Game</h1>       
+            <h1>ASOIAF Hangman Game:<br></h1> 
+            <h2 id="subtitle">Guess the Names of Houses, Great and Small</h2>    
         </div>
     </div>
     <div class="row">
-        <div class="offset-md-4" id="scoreBoard">
-            <h2> Wins: <span id="wins">--</span> -- Loss: <span id="loss">--</span></h2>
+        <div class="offset-md-6" id="scoreBoard">
+            <h2> Wins: <span id="wins">--</span>   Loss: <span id="loss">--</span></h2>
         </div>
     </div>
     <div class="row">
 
-<div class="jumbotron jumbotron-fluid offset-md-4 " >
-    <h3 class="display-4">Press <input class="btn btn-primary" type="button" id="startButton" value="here"> to play!</h3>
+<div class="jumbotron jumbotron-fluid offset-md-6 col-md-3" >
+    <h3 class="display-4">Press <input type="button" id="startButton" value="here"> to play!</h3>
     <hr class="my-4">
     <span id="underScores"> </span>
     
@@ -35,7 +36,10 @@
          
           <h5> Tries Remaining:<span id="guessesLeft"> -- </span></h5>
             
-            <div id="hintBox"> </div>
+            <div>
+               <h6>House Words:<br> <span id="hintBox"></span></h6>
+               
+            </div>
         </div>
         
     </div>

@@ -1,6 +1,19 @@
-#title{
+@font-face{
+    font-family: 'GameOfThrones';
+    src: url(../Fonts/Game\ of\ Thrones.ttf)
+}
+body{
+    background: url('../images/map.jpeg') no-repeat;
+    background-color: #efedd8;
+    background-size: 40%;
+    font-family: 'GameOfThrones', serif;
+    letter-spacing: .4em;
+}
 
-    margin-left: 35%;
+#title{
+    background-color: #bfb78f;
+    margin-left: 40%;
+    border-bottom: 3px solid #a97962;
     
 }
 #scoreBoard{
@@ -13,7 +26,19 @@ h3{
     padding-left: 3%;
     font-size: 3rem!important;
 }
-
+.jumbotron{
+    background-color: #7b7166 !important;
+    border: 3px outset #9fbdc9 !important;
+}
+#startButton{
+    background-color: #7b7166;
+    border: 2px outset #9fbdc9;
+    padding: 1%;
+    height: 58px!important;
+}
+#startButton:active{
+    border-style: inset;
+}
 #wrongBox{
     
     line-height: 5%;
@@ -21,5 +46,5 @@ h3{
 
 #underScores{
     font-size: 2rem!important;
-    padding: 15%;
+    padding: 10% 5%;
 }
